@@ -26,6 +26,7 @@ conda activate apodock
 ## Inference
 
 A demo:
+
 Use `.CSV` file for predicting:
 ```
 python predict.py --csv_file test.csv --output_dir output
