@@ -1,8 +1,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow)](https://github.com/ld139/graphkcat)
-[![bioRxiv](https://www.biorxiv.org/content/10.1101/2025.05.18.654694v1)](https://doi.org/10.1101/2025.05.18.654694)
+[![bioRxiv](https://img.shields.io/badge/bioRxiv2025.05.18.654694-green)](https://doi.org/10.1101/2025.05.18.654694)
 
 
-# GraphKcat:Catalytic pocket-informed augmentation of enzyme kinetic parameters prediction via hierarchical graph learning
+# Catalytic pocket-informed augmentation of enzyme kinetic parameters prediction via hierarchical graph learning
 <div align=center>
 <img src='./toc.svg' width='600',height="300px">
 </div> 
