@@ -1,0 +1,27 @@
+{
+    "train":
+    {
+        "model": "graphkcat", 
+        "data_root" : "/export/home/luod111/chai1",
+        "save_dir" : "./model_enz",
+        "graph_type" : "graphkcat",
+        "repeat" : 1,
+        "fold" : 0,
+        "epochs" : 300,
+        "batch_size" :8,
+        "early_stop_epoch" : 150,
+        "save_model": true, 
+        "hidden_dim": 256,
+        "lr": 1e-4,
+        "pooling": "mean", 
+        "HeteroGNN_layers": true, 
+        "dropout": 0.2,
+        "num_layers": 4, 
+        "ligand_nn_embedding" : true, 
+        "vocab_size": 350, 
+        "num_fc_layers": 2, 
+        "fc_hidden_dim": 4,
+        "share_fc": false
+
+    }
+}

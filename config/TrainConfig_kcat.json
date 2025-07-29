@@ -1,0 +1,26 @@
+{
+    "train":
+    {
+        "model": "graphkcat", 
+        "data_root" : "/export/home/luod111/software/PLmodel/supervised/data/pdbbind",
+        "save_dir" : "./model",
+        "graph_type" : "graphkcat",
+        "repeat" : 1,
+        "fold" : 0,
+        "epochs" : 2000,
+        "batch_size" :32,
+        "early_stop_epoch" : 150,
+        "save_model": true, 
+        "hidden_dim": 256,
+        "lr": 1e-4,
+        "pooling": "sum", 
+        "HeteroGNN_layers": true, 
+        "dropout": 0.1,
+        "num_layers": 4, 
+        "ligand_nn_embedding" : true, 
+        "vocab_size": 350, 
+        "num_fc_layers": 2,  
+        "fc_hidden_dim": 2  
+
+    }
+}
