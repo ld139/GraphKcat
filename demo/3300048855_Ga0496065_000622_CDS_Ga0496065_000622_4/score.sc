@@ -1,0 +1,3 @@
+SEQUENCE: 
+SCORE: total_score dslf_fa13    fa_atr    fa_dun   fa_elec fa_intra_rep fa_intra_sol_xover4              fa_rep              fa_sol hbond_bb_sc hbond_lr_bb    hbond_sc hbond_sr_bb lk_ball_wtd       omega     p_aa_pp pro_close rama_prepro         ref yhh_planarity description 
+SCORE:   -1029.095     0.000 -2106.654   377.721  -614.766        3.737              64.513             243.994            1284.449     -70.308     -55.935     -55.051    -148.142     -51.677      30.754     -63.402     1.459      -3.734     133.774         0.174 3300048855_Ga0496065_000622_CDS_Ga0496065_000622_4_ligand_complex_0001

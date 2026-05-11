@@ -219,6 +219,7 @@ if __name__ == '__main__':
     batch_converter = alphabet.get_batch_converter()
     model_esm.eval()
 
+
     test_df = pd.read_csv("test.csv")
     organism_set = "./sub_utils/all_organism_set.npy"
     temp_set = "./sub_utils/temp_set.npy"

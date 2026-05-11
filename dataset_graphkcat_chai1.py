@@ -1,5 +1,6 @@
 # %%
 import os
+import esm
 import pandas as pd
 import numpy as np
 from scipy.spatial import distance_matrix
@@ -23,7 +24,7 @@ import warnings
 RDLogger.DisableLog('rdApp.*')
 np.set_printoptions(threshold=np.inf)
 warnings.filterwarnings('ignore')
-
+import traceback
 # %%
 def one_of_k_encoding(k, possible_values):
     if k not in possible_values:
@@ -647,171 +648,206 @@ def res2pdb(res_list, pdbid, save_path):
 
 
 # %%
+# import traceback # 如果文件开头没写，请确保这里引入一下
+
 def mols2graphs(complex_path, pdbid, organism_set, temp_set, \
     organism, ph, temp, dis_threshold = 5):
-    parser = PDBParser(QUIET=True)    
+    
+    try:
+        parser = PDBParser(QUIET=True)    
 
-    organism_index = get_organism_index(organism_set, organism) # [1]
-    organism_index = torch.tensor([organism_index]) # [1]
+        organism_index = get_organism_index(organism_set, organism) 
+        organism_index = torch.tensor([organism_index]) 
 
-    ph_encoding = bin_encoding(ph)  # [3]
-    ph_encoding = torch.FloatTensor(ph_encoding)  #[23]
-    # temp_set = np.load('temp_set.npy', allow_pickle=True) 
-    temp_bins = generate_temp_bins_from_set(temp_set)
-    # print(temp_bins)
-    temp_encoding = temp_bin_encoding(temp, temp_bins) #[103]
-    # print(temp_encoding)
-    res_list_pdb_dir = os.path.join(
-                        complex_path,
-                        f'Pocket_clean_{dis_threshold}A.pdb'
-                        )
-    # read sdf ligand file
-    ligand_path = os.path.join(
-                        complex_path,
-                        f'{pdbid}_ligand.sdf'
-                        )
-    ligand = Chem.MolFromMolFile(ligand_path, sanitize=True, removeHs=True)
-    if any([atom.GetSymbol() == 'Si' for atom in ligand.GetAtoms()]):
-        print(f"Silicon found in {pdbid}, skipping...")
-        return
+        ph_encoding = bin_encoding(ph)  
+        ph_encoding = torch.FloatTensor(ph_encoding)  
+        
+        temp_bins = generate_temp_bins_from_set(temp_set)
+        temp_encoding = temp_bin_encoding(temp, temp_bins) 
+        
+        # 1. 读取 ESM 特征
+        esm2_path = os.path.join(complex_path, f'{pdbid}_esm2_3b.pt')
+        if not os.path.exists(esm2_path): 
+            print(f"\n[Debug] {pdbid} 失败: 找不到 ESM 特征文件: {esm2_path}")
+            return None
+        
+        esm2_3b  = torch.load(esm2_path, map_location='cpu')[0]
+        
+        # 2. 读取 UniMol 特征
+        unimol_path = os.path.join(complex_path, f'{pdbid}_unimol_1b.pt')
+        if not os.path.exists(unimol_path): 
+            print(f"\n[Debug] {pdbid} 失败: 找不到 UniMol 特征文件: {unimol_path}")
+            return None
+            
+        unimol_1b = torch.load(unimol_path, map_location='cpu')
+        unimol_1b = torch.squeeze(unimol_1b) 
 
-    protein = os.path.join(
-                        complex_path,
-                        f'{pdbid}_protein.pdb'
-                        )
-    pocket = os.path.join(
-                        complex_path,
-                        f'Pocket_{dis_threshold}A.pdb')
+        # 3. 读取配体
+        ligand_path = os.path.join(complex_path, f'{pdbid}_ligand.sdf')
+        try:
+            ligand = Chem.MolFromMolFile(ligand_path, sanitize=True, removeHs=True)
+        except Exception as e:
+            print(f"\n[Debug] {pdbid} 失败: RDKit 加载 ligand SDF 报错: {e}")
+            ligand = None
+        
+        if ligand is None: 
+            print(f"\n[Debug] {pdbid} 失败: ligand 解析后为 None (可能 SDF 格式不规范或找不到文件: {ligand_path})")
+            return None
+            
+        if any([atom.GetSymbol() == 'Si' for atom in ligand.GetAtoms()]): 
+            print(f"\n[Debug] {pdbid} 失败: ligand 中包含模型不支持的硅 (Si) 原子")
+            return None
 
-    esm2_3b = os.path.join(
-                        complex_path,
-                        f'{pdbid}_esm2_3b.pt'
-                        )
-    esm2_3b = torch.load(esm2_3b, map_location='cpu')[0] #when using esm2_3b
+        # 4. 读取口袋
+        res_list_pdb_dir = os.path.join(complex_path, f'Pocket_clean_{dis_threshold}A.pdb')
+        pocket_raw_path = os.path.join(complex_path, f'Pocket_{dis_threshold}A.pdb')
+        protein_path = os.path.join(complex_path, f'{pdbid}_protein.pdb')
 
-    unimol_1b = os.path.join(
-                        complex_path,
-                        f'{pdbid}_unimol_1b.pt'
-                        )
-    unimol_1b = torch.load(unimol_1b, map_location='cpu')
-    unimol_1b = torch.squeeze(unimol_1b) #
+        current_pocket_path = res_list_pdb_dir
+        if not os.path.exists(current_pocket_path):
+            if not os.path.exists(pocket_raw_path):
+                try:
+                    res_list = get_clean_res_list(parser.get_structure(pdbid, pocket_raw_path).get_residues(), verbose=False, ensure_ca_exist=True)
+                    res2pdb(res_list, pdbid, res_list_pdb_dir)
+                except Exception as e:
+                    print(f"\n[Debug] {pdbid} 警告: 尝试生成 clean pocket 失败: {e}")
+            else:
+                current_pocket_path = pocket_raw_path
+        
+        pocket_mol = Chem.MolFromPDBFile(current_pocket_path, sanitize=False, removeHs=True)
+        if pocket_mol is None: 
+            print(f"\n[Debug] {pdbid} 失败: RDKit 解析口袋 PDB 失败: {current_pocket_path}")
+            return None
 
-    res_list = get_clean_res_list(parser.get_structure(pdbid, pocket).get_residues(), verbose=False, ensure_ca_exist=True)
-    # print(len(res_list))
+        # 5. 构建图
+        subgraphs_node, pos_sub_graph, node_batch_lig, node_class, edge_features_l, edge_index_l,subgraphs_node_pos = get_subgraph_mol(ligand)
 
-    if not os.path.exists(res_list_pdb_dir):
-        res2pdb(res_list, pdbid, res_list_pdb_dir)
+        protein_node, edge_index_pro, edge_features_pro, coord_ca, coord_all = get_protein_graph(parser.get_structure(pdbid, protein_path), \
+        parser.get_structure(pdbid, current_pocket_path))
+        
+        node_batch_pro = get_pro_node_batch(pocket_mol, coord_all)
+        
+        # 6. 交互图
+        edge_index_inter, edge_attrs_inter = inter_graph_cg(pos_sub_graph, coord_ca, dis_threshold=dis_threshold)
+        
+        if edge_index_inter is None: 
+            print(f"\n[Debug] {pdbid} 失败: edge_index_inter 为 None (配体和蛋白距离过远？)")
+            return None
 
-    pocket = res_list_pdb_dir
-    pocket_mol = Chem.MolFromPDBFile(pocket, sanitize=True, removeHs=True)
-    # print(pocket_mol.GetNumAtoms())
-    subgraphs_node, pos_sub_graph, node_batch_lig, node_class, edge_features_l, edge_index_l,subgraphs_node_pos = get_subgraph_mol(ligand)
+        x_all_atom, edge_index_inter_all_atom, edge_attrs_inter_all_atom,pos_all_atom = get_inter_graph_all_atom(ligand, pocket_mol, dis_threshold=5.)
 
-    protein_node, edge_index_pro, edge_features_pro, coord_ca, coord_all = get_protein_graph(parser.get_structure(pdbid, protein), \
-    parser.get_structure(pdbid, pocket))#, protein_saprot_feature)
-    node_batch_pro = get_pro_node_batch(pocket_mol, coord_all)
-    edge_index_inter, edge_attrs_inter = inter_graph_cg(pos_sub_graph, coord_ca, dis_threshold=dis_threshold)
+        # 7. 组装数据
+        data = HeteroData()
+        data["protein"].x = protein_node
+        data["protein", "protein_edge", "protein"].edge_index = edge_index_pro
+        data["protein", "protein_edge", "protein"].edge_attr = edge_features_pro
+        data["protein"].pos = torch.FloatTensor(coord_ca)
 
-    x_all_atom, edge_index_inter_all_atom, edge_attrs_inter_all_atom,pos_all_atom = get_inter_graph_all_atom(ligand, pocket_mol, dis_threshold=5.)
+        data["ligand"].x = node_class 
+        data["ligand", "ligand_edge", "ligand"].edge_index = edge_index_l
+        data["ligand", "ligand_edge", "ligand"].edge_attr = edge_features_l
+        data["ligand"].pos = torch.FloatTensor(pos_sub_graph)
 
+        data["subnodes"] = subgraphs_node
 
-    data = HeteroData()
-    # protein-protein node, protein-protein edge, protein-protein attr
-    data["protein"].x = protein_node
-    data["protein", "protein_edge", "protein"].edge_index = edge_index_pro
-    data["protein", "protein_edge", "protein"].edge_attr = edge_features_pro
-    data["protein"].pos = torch.FloatTensor(coord_ca)
+        data["ligand", "inter_edge", "protein"].edge_index = edge_index_inter
+        data["ligand", "inter_edge", "protein"].edge_attr = edge_attrs_inter
 
-    data["ligand"].x = node_class # [len(subgraphs_node)] ,will be processed by the nn.Embedding layer
-    data["ligand", "ligand_edge", "ligand"].edge_index = edge_index_l
-    data["ligand", "ligand_edge", "ligand"].edge_attr = edge_features_l
-    data["ligand"].pos = torch.FloatTensor(pos_sub_graph)
+        data["complex"].x = x_all_atom 
+        data["complex", "inter_edge", "complex"].edge_index = edge_index_inter_all_atom 
+        data["complex", "inter_edge", "complex"].edge_attr = edge_attrs_inter_all_atom  
+        data["complex"].pos = pos_all_atom 
 
-    data["subnodes"] = subgraphs_node
+        data["node_batch_lig"] = node_batch_lig
+        data["node_batch_pro"] = node_batch_pro
 
+        data["esm_feature"] = esm2_3b 
+        data["unimol_feature"] = unimol_1b
+        data["organism"] = organism_index
+        data["ph_encoding"] = ph_encoding
+        data["temp_encoding"] = temp_encoding
+        
+        return data
 
-
-    data["ligand", "inter_edge", "protein"].edge_index = edge_index_inter
-    data["ligand", "inter_edge", "protein"].edge_attr = edge_attrs_inter
-
-    data["complex"].x = x_all_atom  # [num_nodes, 35]
-    data["complex", "inter_edge", "complex"].edge_index = edge_index_inter_all_atom # [2, num_edges]
-    data["complex", "inter_edge", "complex"].edge_attr = edge_attrs_inter_all_atom   # [num_edges, 16rbf + 3type]
-    data["complex"].pos = pos_all_atom # [num_nodes, 3]
-
-    data["node_batch_lig"] = node_batch_lig
-    data["node_batch_pro"] = node_batch_pro
-
-    assert len(data["node_batch_lig"]) + len(data["node_batch_pro"]) == data["complex"].x.shape[0]
-    data["esm_feature"] = esm2_3b
-    data["unimol_feature"] = unimol_1b
-    data["organism"] = organism_index
-    data["ph_encoding"] = ph_encoding
-    data["temp_encoding"] = temp_encoding
-    return data
+    except Exception as e:
+        print(f"\n[Debug] {pdbid} 致命崩溃: 图构建过程发生代码异常！")
+        traceback.print_exc() # 这句非常关键，能把错误具体行数打出来
+        return None
 
 # %%
-class PLIDataLoader(DataLoader):
-    def __init__(self, data, **kwargs):
-        super().__init__(data,  collate_fn=data.collate_fn, **kwargs)#
-
 class GraphDataset(Dataset):
     """
-    This class is used for generating graph objects using multi process
+    Lazy Loading Version: Generates graph objects on-the-fly to save memory.
     """
-    def __init__(self,  data_df, organism_set, temp_set, dis_threshold=8):
-        # self.data_dir = data_dir
-        self.data_df = data_df
+    def __init__(self, data_df, organism_set_path, temp_set_path, dis_threshold=8):
+        
+        self.data_df = data_df.reset_index(drop=True) # 
         self.dis_threshold = dis_threshold
-        self.organism_set = organism_set
-        self.temp_set = temp_set
-        self._pre_process()
-
-    def _pre_process(self):
-        # data_dir = self.data_dir
-        data_df = self.data_df
-        dis_threshold = self.dis_threshold
-        organism_set = np.load(self.organism_set, allow_pickle=True)
-        temp_set = np.load(self.temp_set, allow_pickle=True)
-        # dis_thresholds = repeat(self.dis_threshold, len(data_df))
-        # dis_thresholds = list(dis_thresholds)
-        graph_data_list = []
-        # complex_id_list = []
-        for i, row in data_df.iterrows():
-            cid, organism, ph, temp = row['id'], str(row['Organism']), row['pH'], row['Temp']
-            if type(cid) != str:
-                cid = str(int(cid))
-            has_complex = 'complex' in row.index and row['complex'] and not pd.isna(row['complex'])
-            if has_complex:
-                complex_dir = os.path.dirname(row['complex'])
-            else:
-                complex_dir = os.path.dirname(row['ligand'])
-            data = mols2graphs(complex_dir, cid, organism_set, temp_set, \
-                             organism, ph, temp, dis_threshold=dis_threshold)
-            if data is None:
-                print(f"Error: {cid} has no data, skipping...")
-                continue
-            graph_data_list.append(data)
-
-
-        self.graph_data_list = graph_data_list
-
-        # self.complex_ids = complex_id_list
-
-    def __getitem__(self, idx):
         
         
-        return self.graph_data_list[idx] #, self.complex_ids[idx], self.pKa_list[idx]
-            
-    
-
-    def collate_fn(self, data_list):
-
-        return data_list
+        self.organism_set = np.load(organism_set_path, allow_pickle=True)
+        self.temp_set = np.load(temp_set_path, allow_pickle=True)
 
     def __len__(self):
         return len(self.data_df)
 
+    def __getitem__(self, idx):
+        
+        row = self.data_df.iloc[idx]
+        cid = str(row['id'])
+        
+        
+        organism = str(row['Organism'])
+        ph = row['pH']
+        temp = row['Temp']
+        
+        # 3. 确定路径
+        if 'complex' in row.index and row['complex'] and not pd.isna(row['complex']):
+            complex_dir = os.path.dirname(str(row['complex']))
+        else:
+            complex_dir = os.path.dirname(str(row['ligand']))
+            
+   
+        try:
+            
+            data = mols2graphs(complex_dir, cid, self.organism_set, self.temp_set, \
+                               organism, ph, temp, dis_threshold=self.dis_threshold)
+            
+           
+            if data is None:
+                return None, cid
+                
+            return data, cid
+            
+        except Exception as e:
+            print(f"Error generating graph for {cid}: {e}")
+            return None, cid
+
+    
+    @staticmethod
+    def collate_fn(batch):
+        """
+        Custom collate function to handle failures (None) and return IDs.
+        batch: list of tuples (data, cid) from __getitem__
+        """
+        valid_data = []
+        valid_ids = []
+        
+        for data, cid in batch:
+            if data is not None:
+                valid_data.append(data)
+                valid_ids.append(cid)
+        
+       
+        if len(valid_data) == 0:
+            return [], []
+            
+        return valid_data, valid_ids
+
+class PLIDataLoader(DataLoader):
+    def __init__(self, dataset, **kwargs):
+        
+        super().__init__(dataset, collate_fn=GraphDataset.collate_fn, **kwargs)
 
 if __name__ == '__main__':
 

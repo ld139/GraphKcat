@@ -1,0 +1,680 @@
+2026-01-10 16:05:11 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:05:12 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:05:12 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:05:12 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:05:12 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:05:30 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:05:31 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:05:31 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:05:31 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:05:31 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:05:45 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:05:45 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:05:45 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:05:45 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:05:45 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:05:59 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:06:00 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:06:00 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:06:00 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:06:00 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:06:14 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:06:14 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:06:14 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:06:14 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:06:14 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:06:29 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:06:30 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:06:30 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:06:30 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:06:30 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:06:45 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:06:46 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:06:46 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:06:46 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:06:46 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:07:02 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:07:02 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:07:02 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:07:02 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:07:02 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:07:26 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:07:26 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:07:26 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:07:26 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:07:26 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:07:53 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:07:54 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:07:54 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:07:54 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:07:54 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:08:18 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:08:19 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:08:19 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:08:19 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:08:19 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:08:35 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:08:36 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:08:36 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:08:36 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:08:36 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:08:52 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:08:53 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:08:53 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:08:53 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:08:53 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:09:10 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:09:11 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:09:11 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:09:11 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:09:11 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:09:24 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:09:25 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:09:25 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:09:25 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:09:25 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:09:39 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:09:40 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:09:40 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:09:40 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:09:40 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:09:55 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:09:55 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:09:55 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:09:55 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:09:55 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:10:09 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:10:10 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:10:10 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:10:10 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:10:10 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:10:24 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:10:25 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:10:25 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:10:25 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:10:25 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:10:39 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:10:39 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:10:39 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:10:39 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:10:39 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:10:52 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:10:53 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:10:53 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:10:53 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:10:53 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:11:05 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:11:06 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:11:06 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:11:06 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:11:06 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:11:18 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:11:19 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:11:19 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:11:19 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:11:19 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:11:45 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:11:45 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:11:45 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:11:45 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:11:45 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:12:10 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:12:10 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:12:10 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:12:10 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:12:10 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:12:34 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:12:35 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:12:35 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:12:35 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:12:35 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:12:52 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:12:53 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:12:53 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:12:53 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:12:53 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:13:10 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:13:11 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:13:11 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:13:11 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:13:11 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:13:26 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:13:27 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:13:27 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:13:27 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:13:27 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:13:42 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:13:43 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:13:43 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:13:43 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:13:43 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:13:58 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:13:58 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:13:58 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:13:58 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:13:58 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:14:13 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:14:14 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:14:14 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:14:14 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:14:14 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:14:31 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:14:32 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:14:32 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:14:32 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:14:32 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:14:50 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:14:51 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:14:51 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:14:51 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:14:51 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:15:09 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:15:10 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:15:10 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:15:10 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:15:10 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:15:26 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:15:27 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:15:27 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:15:27 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:15:27 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:15:42 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:15:42 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:15:42 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:15:42 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:15:42 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:15:57 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:15:58 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:15:58 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:15:58 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:15:58 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:16:21 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:16:22 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:16:22 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:16:22 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:16:22 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:16:49 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:16:49 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:16:49 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:16:49 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:16:49 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:17:12 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:17:13 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:17:13 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:17:13 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:17:13 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:17:32 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:17:32 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:17:32 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:17:32 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:17:32 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:17:50 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:17:51 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:17:51 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:17:51 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:17:51 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:18:09 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:18:10 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:18:10 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:18:10 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:18:10 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:18:27 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:18:27 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:18:27 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:18:28 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:18:28 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:18:45 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:18:45 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:18:45 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:18:45 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:18:45 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:19:02 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:19:03 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:19:03 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:19:03 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:19:03 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:19:31 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:19:32 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:19:32 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:19:32 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:19:32 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:19:56 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:19:57 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:19:57 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:19:57 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:19:57 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:20:25 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:20:25 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:20:25 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:20:25 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:20:25 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:20:31 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:20:32 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:20:32 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:20:32 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:20:32 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:20:38 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:20:39 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:20:39 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:20:39 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:20:39 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:20:45 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:20:46 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:20:46 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:20:46 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:20:46 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:21:03 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:21:03 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:21:03 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:21:03 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:21:03 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:21:22 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:21:23 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:21:23 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:21:23 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:21:23 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:21:41 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:21:41 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:21:41 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:21:41 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:21:41 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:21:57 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:21:58 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:21:58 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:21:58 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:21:58 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:22:12 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:22:12 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:22:12 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:22:12 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:22:12 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:22:28 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:22:28 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:22:28 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:22:28 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:22:28 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:22:41 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:22:41 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:22:41 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:22:41 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:22:41 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:22:54 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:22:55 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:22:55 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:22:55 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:22:55 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:23:07 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:23:08 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:23:08 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:23:08 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:23:08 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:23:32 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:23:33 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:23:33 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:23:33 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:23:33 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:24:01 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:24:02 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:24:02 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:24:02 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:24:02 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:24:26 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:24:27 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:24:27 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:24:27 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:24:27 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:24:33 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:24:34 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:24:34 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:24:34 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:24:34 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:24:40 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:24:41 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:24:41 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:24:41 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:24:41 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:24:48 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:24:48 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:24:48 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:24:48 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:24:48 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:25:14 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:25:15 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:25:15 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:25:15 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:25:15 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:25:39 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:25:40 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:25:40 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:25:40 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:25:40 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:26:05 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:26:05 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:26:05 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:26:05 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:26:05 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:26:25 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:26:26 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:26:26 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:26:26 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:26:26 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:26:44 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:26:44 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:26:44 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:26:44 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:26:44 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:27:03 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:27:04 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:27:04 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:27:04 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:27:04 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:27:22 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:27:23 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:27:23 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:27:23 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:27:23 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:27:43 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:27:43 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:27:43 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:27:43 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:27:43 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:28:01 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:28:02 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:28:02 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:28:02 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:28:02 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:28:14 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:28:15 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:28:15 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:28:15 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:28:15 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:28:28 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:28:29 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:28:29 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:28:29 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:28:29 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:28:43 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:28:43 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:28:43 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:28:43 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:28:43 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:29:07 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:29:08 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:29:08 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:29:08 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:29:08 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:29:32 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:29:32 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:29:32 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:29:32 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:29:32 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:29:55 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:29:55 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:29:55 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:29:55 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:29:55 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:30:10 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:30:11 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:30:11 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:30:11 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:30:11 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:30:27 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:30:27 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:30:27 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:30:27 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:30:27 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:30:43 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:30:44 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:30:44 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:30:44 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:30:44 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:30:58 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:30:59 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:30:59 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:30:59 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:30:59 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:31:13 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:31:14 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:31:14 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:31:14 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:31:14 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:31:27 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:31:28 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:31:28 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:31:28 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:31:28 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:31:55 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:31:55 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:31:55 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:31:55 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:31:55 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:32:20 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:32:20 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:32:20 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:32:20 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:32:20 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:32:47 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:32:48 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:32:48 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:32:48 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:32:48 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:32:57 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:32:57 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:32:57 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:32:57 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:32:57 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:33:06 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:33:07 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:33:07 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:33:07 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:33:07 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:33:16 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:33:17 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:33:17 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:33:17 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:33:17 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:33:43 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:33:43 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:33:43 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:33:43 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:33:43 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:34:08 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:34:08 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:34:08 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:34:08 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:34:08 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:34:33 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:34:33 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:34:33 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:34:33 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:34:33 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:34:42 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:34:42 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:34:42 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:34:42 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:34:42 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:34:51 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:34:51 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:34:51 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:34:51 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:34:51 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:35:00 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:35:00 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:35:00 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:35:00 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:35:00 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:35:09 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:35:09 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:35:09 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:35:09 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:35:09 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:35:18 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:35:18 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:35:18 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:35:18 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:35:18 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:35:27 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:35:27 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:35:27 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:35:27 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:35:27 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:35:29 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:35:29 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:35:29 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:35:29 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:35:29 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:35:31 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:35:31 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:35:31 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:35:31 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:35:31 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:35:32 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:35:33 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:35:33 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:35:33 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:35:33 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:35:50 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:35:51 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:35:51 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:35:51 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:35:51 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:36:10 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:36:11 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:36:11 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:36:11 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:36:11 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:36:29 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:36:30 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:36:30 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:36:30 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:36:30 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:36:51 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:36:52 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:36:52 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:36:52 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:36:52 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:37:17 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:37:18 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:37:18 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:37:18 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:37:18 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:37:40 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:37:41 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:37:41 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:37:41 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:37:41 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:37:57 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:37:57 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:37:57 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:37:57 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:37:57 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:38:13 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:38:13 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:38:13 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:38:13 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:38:13 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:38:28 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:38:29 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:38:29 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:38:29 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:38:29 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:38:34 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:38:35 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:38:35 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:38:35 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:38:35 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:38:40 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:38:40 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:38:40 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:38:40 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:38:40 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:38:46 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:38:46 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:38:46 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:38:46 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:38:46 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:38:54 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:38:54 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:38:54 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:38:54 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:38:54 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:39:02 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:39:03 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:39:03 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:39:03 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:39:03 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:39:10 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:39:11 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:39:11 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:39:11 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:39:11 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:39:25 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:39:26 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:39:26 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:39:26 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:39:26 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:39:39 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:39:40 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:39:40 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:39:40 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:39:40 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:39:54 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:39:54 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:39:54 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:39:54 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:39:54 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:40:00 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:40:00 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:40:00 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:40:00 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:40:00 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:40:05 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:40:06 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:40:06 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:40:06 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:40:06 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:40:11 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:40:12 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:40:12 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:40:12 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:40:12 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:40:18 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:40:18 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:40:18 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:40:18 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:40:18 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:40:24 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:40:24 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:40:24 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:40:24 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:40:24 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:40:30 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:40:31 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:40:31 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:40:31 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:40:31 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:40:48 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:40:49 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:40:49 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:40:49 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:40:49 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:41:09 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:41:09 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:41:09 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:41:09 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:41:09 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:41:27 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:41:28 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:41:28 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:41:28 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:41:28 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:41:37 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:41:37 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:41:37 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:41:37 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:41:37 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.
+2026-01-10 16:41:46 | unimol_tools/data/conformer.py | 437 | INFO | Uni-Mol Tools | Start generating conformers...
+2026-01-10 16:41:46 | unimol_tools/data/conformer.py | 452 | INFO | Uni-Mol Tools | Succeeded in generating conformers for 100.00% of molecules.
+2026-01-10 16:41:46 | unimol_tools/data/conformer.py | 469 | INFO | Uni-Mol Tools | Succeeded in generating 3d conformers for 100.00% of molecules.
+2026-01-10 16:41:46 | unimol_tools/tasks/trainer.py | 78 | INFO | Uni-Mol Tools | Number of GPUs available: 1
+2026-01-10 16:41:46 | unimol_tools/tasks/trainer.py | 98 | INFO | Uni-Mol Tools | Using single GPU.

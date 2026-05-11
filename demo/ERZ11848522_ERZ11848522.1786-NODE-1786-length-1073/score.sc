@@ -1,0 +1,3 @@
+SEQUENCE: 
+SCORE: total_score dslf_fa13    fa_atr    fa_dun   fa_elec fa_intra_rep fa_intra_sol_xover4              fa_rep              fa_sol hbond_bb_sc hbond_lr_bb    hbond_sc hbond_sr_bb lk_ball_wtd       omega     p_aa_pp pro_close rama_prepro         ref yhh_planarity description 
+SCORE:    -976.225     0.000 -2029.055   370.686  -592.187        3.622              59.440             242.017            1203.634     -56.205     -56.997     -42.201    -154.326     -47.546      15.337     -58.555     1.567      -2.246     166.639         0.148 ERZ11848522_ERZ11848522.1786-NODE-1786-length-1073_ligand_complex_0001

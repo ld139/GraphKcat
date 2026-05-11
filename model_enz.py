@@ -12,22 +12,11 @@ from torch_geometric.data.batch import Batch
 from egnn_clean import EGNN
 
 def dense_to_sparse(dense_features, mask):
-    """
-    将 dense 格式的特征重新转回稀疏批次图。
-
-    Args:
-        dense_features (torch.Tensor): 形状为 [batch_size, max_nodes, hidden] 的特征张量。
-        mask (torch.Tensor): 形状为 [batch_size, max_nodes] 的布尔掩码，指示哪些节点有效。
-
-    Returns:
-        torch.Tensor: 恢复的节点特征，形状为 [num_nodes, hidden]。
-        torch.Tensor: 节点所属的 batch 索引，形状为 [num_nodes]。
-    """
-    # 提取有效节点
+    
     valid_nodes = mask.view(-1)
     valid_features = dense_features.view(-1, dense_features.size(-1))[valid_nodes]
     
-    # 构建每个节点的 batch 索引
+    
     num_batches, max_nodes = mask.size()
     batch_indices = torch.arange(num_batches, device=mask.device).repeat_interleave(max_nodes)[valid_nodes]
 
@@ -39,23 +28,21 @@ class AttentionPooling(nn.Module):
         super(AttentionPooling, self).__init__()
         self.in_channels = in_channels
 
-        # 定义注意力机制中的权重矩阵和全局上下文向量
-        self.attn_fc = nn.Linear(in_channels, 1)  # 线性变换，用于计算注意力分数
+        
+        self.attn_fc = nn.Linear(in_channels, 1)  
 
     def forward(self, x):
-        """
-        x: [num_nodes, in_channels] - 节点特征
-        """
-        # 计算注意力分数 (未归一化)
-        attn_scores = self.attn_fc(x)  # [num_nodes, 1]
-        attn_scores = F.leaky_relu(attn_scores)  # 使用 LeakyReLU 激活
+        
+        
+        attn_scores = self.attn_fc(x) # [num_nodes, 1]
+        attn_scores = F.leaky_relu(attn_scores)  
 
-        # 对注意力分数进行归一化（softmax）
-        attn_scores = F.softmax(attn_scores, dim=0)  # 归一化 [num_nodes, 1]
+        
+        attn_scores = F.softmax(attn_scores, dim=0)  #  [num_nodes, 1]
 
-        # 加权聚合节点特征
+        
         x_weighted = x * attn_scores  # [num_nodes, in_channels]
-        x_pooled = torch.sum(x_weighted, dim=0)  # [in_channels]，对节点特征加权求和
+        x_pooled = torch.sum(x_weighted, dim=0)  # [in_channels]
         return x_pooled
 
 class EGNN_complex(nn.Module):
@@ -249,10 +236,10 @@ class all_atom_view_graph(nn.Module):
         data_x_all_atom_edge_index = data["complex", "inter_edge", "complex"].edge_index
         data_x_all_atom_edge_attr = data["complex", "inter_edge", "complex"].edge_attr
         
-        # 初始节点特征线性映射
+        
         x = self.lin_node_lig(data_x_all_atom)
         
-        # 更新节点特征和位置
+        
         x, pos = self.egnn(x, data["complex"].pos, data_x_all_atom_edge_index, data_x_all_atom_edge_attr)
         data["complex"].x = x
         data_list = data.to_data_list()
@@ -272,58 +259,51 @@ class all_atom_view_graph(nn.Module):
 
         x_list_lig_sub, x_list_pro_sub = [], []
 
-        # 预先将 batch_lig 和 batch_pro 转换为 Tensor
+       
         batch_lig = [torch.tensor(batch_lig_sub).to(x.device) for batch_lig_sub in batch_lig]
         batch_pro = [torch.tensor(batch_pro_sub).to(x.device) for batch_pro_sub in batch_pro]
         for x_sub, batch_lig_sub, batch_pro_sub,pos_lig_sub, pos_pro_sub, pos_all in zip \
             (x_list, batch_lig, batch_pro,pos_lig_list,pos_pro_list,pos_all_list):
-            # 计算 split_sizes_sub，只需要一次计算
+            
             split_sizes_sub = [len(batch_lig_sub), len(batch_pro_sub)]
             x_lig_sub, x_pro_sub = torch.split(x_sub, split_sizes_sub, dim=0)
             x_lig_pos, x_pro_pos = torch.split(pos_all, split_sizes_sub, dim=0)
 
-            # 粗粒化节点的特征初始化
+            
             len_sub_node_lig = len(torch.unique(batch_lig_sub))
             len_sub_node_pro = len(torch.unique(batch_pro_sub))
 
             sub_node_lig = torch.zeros(len_sub_node_lig, x_lig_sub.size(1), device=x_lig_sub.device)
             sub_node_pro = torch.zeros(len_sub_node_pro, x_pro_sub.size(1), device=x_pro_sub.device)
 
-            # 拼接坐标
+            
             # sub_pos_lig = torch.zeros(len_sub_node_lig, x_lig_pos.size(1), device=x_lig_pos.device)
             # sub_pos_pro = torch.zeros(len_sub_node_pro, x_pro_sub.size(1), device=x_pro_sub.device)
 
             x_lig_pos = torch.cat([x_lig_pos, pos_lig_sub], dim=0)
             x_pro_pos = torch.cat([x_pro_pos, pos_pro_sub], dim=0)
 
-            # 拼接粗粒化节点到全原子节点的特征
+            
             x_lig_sub = torch.cat([x_lig_sub, sub_node_lig], dim=0)
             x_pro_sub = torch.cat([x_pro_sub, sub_node_pro], dim=0)
 
-            # 创建粗粒化节点的批次索引
-            # 这里我们假设 batch_lig_sub 和 batch_pro_sub 每个元素对应着一个粗粒化节点
-            # batch_lig_sub 和 batch_pro_sub 是每个原子节点所属的粗粒化节点的索引
             
-            # 计算粗粒化边索引
             lig_to_cg_edges = torch.stack([batch_lig_sub, torch.arange(len(batch_lig_sub), device=x_lig_sub.device)], dim=0)
             pro_to_cg_edges = torch.stack([batch_pro_sub, torch.arange(len(batch_pro_sub), device=x_pro_sub.device)], dim=0)
 
-            # 确保边索引是整数类型
+            
             lig_to_cg_edges = lig_to_cg_edges.long()
             pro_to_cg_edges = pro_to_cg_edges.long()
 
-            # 使用egnn层更新粗粒化节点
-            # for i in range(self.n_layers):
-            #     x_lig_sub = self.gconv_l[i](x_lig_sub, lig_to_cg_edges)
-            #     x_pro_sub = self.gconv_pro[i](x_pro_sub, pro_to_cg_edges)
+            
             x_lig_sub, _ = self.egnn_lig_pool(x_lig_sub, x_lig_pos, lig_to_cg_edges, None)
             x_pro_sub, _ = self.egnn_pro_pool(x_pro_sub, x_pro_pos, pro_to_cg_edges, None)
 
-            # 从拼接后的特征中提取粗粒化节点
+            
             x_lig_cg = x_lig_sub[-len_sub_node_lig:]  # 最后几个是粗粒化节点
             x_pro_cg = x_pro_sub[-len_sub_node_pro:]  # 最后几个是粗粒化节点
 
-            # 将粗粒化节点的特征存入列表
+            
             x_list_lig_sub.append(x_lig_cg)
             x_list_pro_sub.append(x_pro_cg)
 
@@ -359,52 +339,52 @@ class HeteroGNN(nn.Module):
         ])
 
     def forward(self, data_list):
-        # 批量处理同构图部分（ligand和protein各自的图卷积）
+        
         batch = Batch.from_data_list(data_list)
         x_lig = batch['ligand'].x.float()
         x_pro = batch['protein'].x.float()
         
-        # 预计算各样本的节点数用于后续分割
+        
         num_ligs = [data['ligand'].num_nodes for data in data_list]
         num_pros = [data['protein'].num_nodes for data in data_list]
         # print(batch['ligand', 'ligand_edge', 'ligand'].edge_index.shape)
         edge_index_list = [data['protein'].num_nodes for data in data_list]
         for i in range(self.num_layers):
-            # 批量处理ligand图卷积
+            
             x_lig = self.lig_gconvs[i](
                 x_lig,
                 batch['ligand', 'ligand_edge', 'ligand'].edge_index,
                 batch['ligand', 'ligand_edge', 'ligand'].edge_attr
             )
             
-            # 批量处理protein图卷积
+            
             x_pro = self.pro_gconvs[i](
                 x_pro,
                 batch['protein', 'protein_edge', 'protein'].edge_index,
                 batch['protein', 'protein_edge', 'protein'].edge_attr
             )
             
-            # 按样本分割特征以处理跨图卷积
+            
             x_lig_split = x_lig.split(num_ligs)
             x_pro_split = x_pro.split(num_pros)
             
             updated_lig, updated_pro = [], []
             for j in range(len(data_list)):
-                # 拼接单个样本的ligand和protein特征
+                
                 x_lig_pro = torch.cat([x_lig_split[j], x_pro_split[j]], dim=0)
                 
-                # 获取该样本的跨图边信息
+                
                 edge_index = data_list[j]['ligand', 'inter_edge', 'protein'].edge_index
                 edge_attr = data_list[j]['ligand', 'inter_edge', 'protein'].edge_attr
                 
-                # 处理跨图卷积
+                
                 x_lig_pro = self.lig_pro_gconvs[i](x_lig_pro, edge_index, edge_attr)
                 
-                # 重新分割特征
+                
                 updated_lig.append(x_lig_pro[:num_ligs[j]])
                 updated_pro.append(x_lig_pro[num_ligs[j]:])
             
-            # 合并批量特征
+            
             x_lig = torch.cat(updated_lig, dim=0)
             x_pro = torch.cat(updated_pro, dim=0)
         
@@ -464,7 +444,7 @@ class AttentionBlock(nn.Module):
         output = self.fc_out(weighted)
                 # Determine if returning attention weights
         if return_attn is None:
-            return_attn = not self.training  # 默认训练不返回，推理返回
+            return_attn = not self.training  
 
         if return_attn:
             return output, attention_weights
@@ -498,18 +478,18 @@ class CrossAttentionBlock(nn.Module):
         self.norm_lig = nn.LayerNorm(hid_dim)
 
     def forward(self, ligand_features, aa_features, mask_l, mask_aa):
-        # 生成掩码以匹配attention分数的维度
+        
         mask_l_expanded = mask_l.unsqueeze(1)  # [B, 1, N_l]
         mask_aa_expanded = mask_aa.unsqueeze(1)  # [B, 1, N_aa]
 
-        # 交叉注意力计算
+        
         if self.training:
             aa_att = self.att(aa_features, ligand_features, ligand_features, mask=mask_l_expanded)
             lig_att = self.att(ligand_features, aa_features, aa_features, mask=mask_aa_expanded)
         else:
             aa_att, atten_score_aa_lig = self.att(aa_features, ligand_features, ligand_features, mask=mask_l_expanded)
             lig_att, atten_score_lig_aa = self.att(ligand_features, aa_features, aa_features, mask=mask_aa_expanded)
-        # 线性变换与残差连接
+        
         aa_features = self.linear_res(aa_att) + aa_features
         # aa_features = aa_att + aa_features
         aa_features = self.norm_aa(aa_features)
@@ -588,7 +568,7 @@ class bottle_view_graph(nn.Module):
         # self.att_pool = AttentionPooling(hidden_dim)
         
         if self.share_fc:
-            self.fc = FC(hidden_dim*6, hidden_dim*fc_hidden_dim, num_fc_layers, dropout, 1)
+            self.fc = FC(hidden_dim*5 + 23 + 103, hidden_dim*fc_hidden_dim, num_fc_layers, dropout, 1)
         else:
             self.fc_kcat = FC(hidden_dim*5+23+103, hidden_dim*fc_hidden_dim, num_fc_layers, dropout, 1)#
             self.fc_km = FC(hidden_dim*5+23+103, hidden_dim*fc_hidden_dim, num_fc_layers, dropout, 1)#
@@ -626,22 +606,22 @@ class bottle_view_graph(nn.Module):
         batch_size = len(data)
         data_batch = Batch.from_data_list(data)
 
-        # 特征转换
+        
         # print(data_batch["esm_feature"].shape, data_batch["unimol_feature"].shape)
         esm_feature = self.fc_esm(data_batch["esm_feature"])
         unimol_feature = self.fc_unimol(data_batch["unimol_feature"])
 
-        # 优化批次索引
+        
         device = esm_feature.device
         m_list = [d["esm_feature"].shape[0] for d in data]  # 建议预计算
         n_list = [d["unimol_feature"].shape[0] for d in data]
         batch_index_esm = torch.repeat_interleave(torch.arange(batch_size, device=device), torch.tensor(m_list, device=device))
         batch_index_unimol = torch.repeat_interleave(torch.arange(batch_size, device=device), torch.tensor(n_list, device=device))
 
-        # 图特征提取
+        
         x_list_lig_sub, x_list_pro_sub, _, _ = self.all_atom_view(data_batch)
 
-        # 批量处理嵌入
+        
         if self.ligand_nn_embedding:
             sub_node_type_embs = torch.cat([d["ligand"].x for d in data], dim=0)
             sub_node_type_embs = self.embedding(sub_node_type_embs)
@@ -654,7 +634,7 @@ class bottle_view_graph(nn.Module):
         x_pro_subs = torch.cat(x_list_pro_sub, dim=0)
         all_emb_pros = self.lin_node_pro(self.layer_norm_pro(torch.cat([pro_xs, x_pro_subs], dim=1).float()))
 
-        # 分配嵌入
+        
         start_lig, start_pro = 0, 0
         for i in range(batch_size):
             num_lig = data[i]["ligand"].x.shape[0]
@@ -664,7 +644,7 @@ class bottle_view_graph(nn.Module):
             start_lig += num_lig
             start_pro += num_pro
 
-        # 异构图处理
+        
         if self.HeteroGNN_layers:
             x_pro, x_lig = self.HeteroGNN(data)
         else:
@@ -672,13 +652,13 @@ class bottle_view_graph(nn.Module):
             x_lig = data.x_dict['ligand']
             x_pro = data.x_dict['protein']
 
-        # 转换为密集张量
+        
         esm_feature, mask_esm = to_dense_batch(esm_feature, batch_index_esm)
         unimol_feature, mask_unimol = to_dense_batch(unimol_feature, batch_index_unimol)
         x_pro, mask_pro = to_dense_batch(x_pro, data_batch.batch_dict['protein'])
         x_lig, mask_lig = to_dense_batch(x_lig, data_batch.batch_dict['ligand'])
 
-        # 交叉注意力
+        
         # if self.cross_attention:
         if self.training:
                 
@@ -717,7 +697,7 @@ class bottle_view_graph(nn.Module):
             x_llmlig = global_mean_pool(x_llmlig_batch, batch_index_unimol)
             x_llmpro = global_mean_pool(x_llmpro_batch, batch_index_esm)
 
-        # # 拼接并输出
+        
         org_emb = self.embedding_organism(data_batch["organism"])
         # # # # RESHAPE TO [B,D]
         ph_emb = data_batch["ph_encoding"].reshape(-1, 23)  # 23dim
