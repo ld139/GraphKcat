@@ -1,0 +1,4 @@
+id,complex,ligand,protein,Organism,substrate,Smiles,pH,Temp,pred_log_kcat_graphkcat,pred_log_km_graphkcat,pred_log_kcat_km_graphkcat
+rzsuniref50_26,,./demo/rzsuniref50_26/rzsuniref50_26_ligand.sdf,./demo/rzsuniref50_26/rzsuniref50_26_protein.pdb,Escherichia coli,p-Hydroxybenzalacetone,CC(=O)/C=C/C1=CC=C(C=C1)O,5.0,40,-0.8152395486831665,-0.6815941333770752,-0.1336454153060913
+rzsuniref50_27,,./demo/rzsuniref50_27/rzsuniref50_27_ligand.sdf,./demo/rzsuniref50_27/rzsuniref50_27_protein.pdb,Escherichia coli,p-Hydroxybenzalacetone,CC(=O)/C=C/C1=CC=C(C=C1)O,5.0,40,-0.9340488910675048,-0.6237685680389404,-0.3102803230285644
+rzsuniref50_28,./demo/rzsuniref50_28/rzsuniref50_28.pdb,,,Escherichia coli,p-Hydroxybenzalacetone,CC(=O)/C=C/C1=CC=C(C=C1)O,5.0,40,-0.7091283202171326,-0.6697899103164673,-0.0393384099006652

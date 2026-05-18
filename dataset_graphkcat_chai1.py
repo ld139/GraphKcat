@@ -71,8 +71,8 @@ def get_edge_index(mol, graph):
     return torch.stack(edge_features)
 
 def bond_features(bond):
-    # 返回一个[1,6]的张量，表示一键的各种信息是否存在
-    bt = bond.GetBondType() # 获取键的类型
+    
+    bt = bond.GetBondType() # 
     fbond = [bt == Chem.rdchem.BondType.SINGLE, bt == Chem.rdchem.BondType.DOUBLE, bt == Chem.rdchem.BondType.TRIPLE, \
              bt == Chem.rdchem.BondType.AROMATIC, bond.IsInRing(),bond.GetIsConjugated()]
     return torch.Tensor(fbond)
@@ -164,12 +164,12 @@ def inter_graph_cg(pos_sub_graph, pos_protein, dis_threshold=8.0):
     # Generate edge index
     edge_index_inter = torch.tensor([src, dst+pos_sub_graph.shape[0]], dtype=torch.long) # the index of protein nodes should be added by the number of ligand nodes
 
-    edge_index_inter = torch.cat([edge_index_inter, edge_index_inter.flip(0)], dim=1)  # 添加反向边
+    edge_index_inter = torch.cat([edge_index_inter, edge_index_inter.flip(0)], dim=1)  
     # src = torch.cat([src, dst]) # 
     # Generate edge attributes
     edge_attrs_inter = torch.stack([get_rbfs(dis_matrix_lp[i, j], cg="protein") for i, j in zip(src, dst)])
 
-    edge_attrs_inter = torch.cat([edge_attrs_inter, edge_attrs_inter], dim=0)  # 添加反向边的属性
+    edge_attrs_inter = torch.cat([edge_attrs_inter, edge_attrs_inter], dim=0)  
     # Sanity checks
     assert edge_index_inter.dtype == torch.long, "edge_index_inter must be torch.long"
     assert edge_attrs_inter.dtype == torch.float32, "edge_attrs_inter must be torch.float32"
@@ -252,7 +252,7 @@ def get_protein_graph(protein, pocket, saprot_feature=None, topk=16):
     seq = "".join([three_to_one.get(res.resname) for res in pocket_res_list])
     feat_one_hot = one_hot_seq(seq)
     if saprot_feature is not None:
-        saprot_feature_pocket = get_pcoket_saprot_feature(protein, pocket, saprot_feature)
+        saprot_feature_pocket = get_pocket_saprot_feature(protein, pocket, saprot_feature)
 
         node = torch.cat([node, feat_one_hot, saprot_feature_pocket], dim=1)
     else:
@@ -313,23 +313,18 @@ def get_organism_index(organism_set, organism):
 
 
 def bin_encoding(value, method='onehot'):
-    """
-    支持非均匀分箱的编码
-    value: 输入标量 (如pH=6.3)
-    bins: 递增分箱边界，如generate_ph_bins()的输出
-    method: 编码方式
-    """
-    # 确定所属区间
+    
+    # 
     def generate_ph_bins():
-        """ 生成包含强酸、0.5间隔、强碱的分箱边界 """
-        strong_acid = [0, 2]                # 强酸区间: 0 <= pH < 2
-        middle = np.arange(2, 12, 0.5)      # 中间区间: 2 <= pH <12，每0.5一个bin
-        strong_base = [12, 14]              # 强碱区间: 12 <= pH <=14
+        
+        strong_acid = [0, 2]                
+        middle = np.arange(2, 12, 0.5)      
+        strong_base = [12, 14]              
         return np.concatenate([strong_acid, middle, strong_base])
 
     bins = generate_ph_bins()
     bin_idx = np.digitize(value, bins) - 1
-    bin_idx = np.clip(bin_idx, 0, len(bins)-2)  # 约束索引范围
+    bin_idx = np.clip(bin_idx, 0, len(bins)-2)  
     
     if method == 'ordinal':
         return bin_idx
@@ -342,100 +337,90 @@ def bin_encoding(value, method='onehot'):
 
 
 def generate_temp_bins(train_temps, bin_width=1.0):
-    """
-    生成分箱边界，包含低于min和高于max的特殊箱
-    train_temps: 训练集温度Tensor
-    bin_width: 分箱宽度（如1.0或2.0）
-    """
+   
     min_temp = train_temps.min().item()
     max_temp = train_temps.max().item()
     
-    # 生成主分箱（不包含两端）
+    
     lower = min_temp
     upper = max_temp
     num_main_bins = int((upper - lower) // bin_width) + 1
     
     main_bins = torch.arange(
         start=lower,
-        end=lower + num_main_bins*bin_width + 1e-6,  # 避免浮点误差
+        end=lower + num_main_bins*bin_width + 1e-6,  
         step=bin_width
     )
     
-    # 添加两端特殊分箱
+    
     bins = torch.cat([
-        torch.tensor([-torch.inf]),  # 左端：<min_temp
+        torch.tensor([-torch.inf]),  
         main_bins,
-        torch.tensor([torch.inf])    # 右端：>max_temp
+        torch.tensor([torch.inf])   
     ])
     
     return bins
 
 def generate_temp_bins_from_set(train_temp_set, bin_width=1.0):
-    """
-    从温度集合生成分箱边界，包含低于min和高于max的特殊箱
-    train_temp_set: 训练集温度集合（Python set）或包含集合的0维NumPy数组
-    bin_width: 分箱宽度（如1.0或2.0）
-    """
-    # 修复1：处理NumPy数组包装的集合
+    
+    #
     if isinstance(train_temp_set, np.ndarray):
-        train_temp_set = train_temp_set.item()  # 提取真正的Python集合
+        train_temp_set = train_temp_set.item()  
     
-    # 修复2：确保输入为可迭代对象
+    
     if not isinstance(train_temp_set, (set, list, tuple)):
-        raise TypeError("输入必须是Python集合、列表或元组")
+        raise TypeError("Input must be a set, list, or tuple")
     
-    # 转换为排序后的Tensor
+    
     sorted_temps = torch.tensor(sorted(train_temp_set), dtype=torch.float32)
     
-    # 后续逻辑保持不变...
+   
     min_temp = sorted_temps[0].item()
     max_temp = sorted_temps[-1].item()
     
-    # 生成主分箱（不包含两端）
+    
     lower = min_temp
     upper = max_temp
     num_main_bins = int((upper - lower) // bin_width) + 1
     
     main_bins = torch.arange(
         start=lower,
-        end=lower + num_main_bins*bin_width + 1e-6,  # 避免浮点误差
+        end=lower + num_main_bins*bin_width + 1e-6,  
         step=bin_width
     )
     
-    # 添加两端特殊分箱
+    
     bins = torch.cat([
-        torch.tensor([-torch.inf]),  # 左端：<min_temp
+        torch.tensor([-torch.inf]),  
         main_bins,
-        torch.tensor([torch.inf])    # 右端：>max_temp
+        torch.tensor([torch.inf])    
     ])
     
     return bins
 
 def temp_bin_encoding(values, bins, method='onehot', device='cpu'):
-    """
-    处理标量输入的兼容版本
-    """
-    # 转换输入为至少1维张量
+    
+    
     if not isinstance(values, torch.Tensor):
         values = torch.tensor(values, dtype=torch.float32)
-    values = values.to(device).view(-1)  # 确保至少1维
+    values = values.to(device).view(-1)  
     
     bins = bins.to(device)
     
-    # 确定分箱索引
+    
     bin_indices = torch.bucketize(values, bins, right=False) - 1
     bin_indices = torch.clamp(bin_indices, 0, len(bins)-2)
     
-    # 编码输出
+    
     n_bins = len(bins) - 1
     if method == 'ordinal':
         return bin_indices.to(torch.long).squeeze()
     elif method == 'onehot':
         onehot = torch.zeros(len(values), n_bins, device=device)
         onehot.scatter_(1, bin_indices.unsqueeze(1), 1)
-        return onehot.squeeze(0)  # 输入为标量时返回1D张量
+        return onehot.squeeze(0)  #
     else:
-        raise ValueError("method必须为'onehot'或'ordinal'")
+        raise ValueError("method must be 'onehot' or 'ordinal'")
 
 def inter_graph_all_atom(ligand, pocket, dis_threshold=5.):
     atom_num_l = ligand.GetNumAtoms()
@@ -447,7 +432,7 @@ def inter_graph_all_atom(ligand, pocket, dis_threshold=5.):
 
     pos = torch.cat([torch.FloatTensor(pos_l), torch.FloatTensor(pos_p)], dim=0)
 
-    # 添加配体-配体和口袋-口袋之间的边
+    
     dis_matrix_l = distance_matrix(pos_l, pos_l)
     dis_matrix_p = distance_matrix(pos_p, pos_p)
     dis_matrix_lp = distance_matrix(pos_l, pos_p)
@@ -535,7 +520,7 @@ def get_subgraph_mol(mol):
         # print(mol.smiles)
         sub_type = vocab_dict[node.smiles]
         # print(sub_type)
-        SanitizeMol(mol, SanitizeFlags.SANITIZE_SETAROMATICITY)  # 保证分子的完整性
+        SanitizeMol(mol, SanitizeFlags.SANITIZE_SETAROMATICITY)  
         subgraphs.append(mol2graph(mol))
         
         # single_atom.append(1)
@@ -576,16 +561,16 @@ def get_subgraph_mol(mol):
     return subgraphs, pos, node_batch, node_class, edge_features, edge_index, subgraph_pos
 
 def get_CA_coord(res):
-    # 获取残基的CA原子的坐标
+    
     for atom in [res['N'], res['CA'], res['C'], res['O']]:
             if atom == res['CA']:
                 return atom.coord
 
 def get_pro_coord(pro,max_atom_num=24):
-    # 获取残基的所有原子的坐标，包括side chain
-    coords_pro = [] # 所有原子的坐标 list
-    coords_pro_full = [] # full的坐标，不足的用nan填充  
-    coords_main_pro = [] # 只包含主链N,CA,C原子的坐标
+    
+    coords_pro = [] 
+    coords_pro_full = [] 
+    coords_main_pro = [] 
 
     for res in pro:
         # print(len(res.get_atoms()))
@@ -626,29 +611,28 @@ def get_pro_coord(pro,max_atom_num=24):
     return coords_pro_full, coords_pro, coords_main_pro
     
 def res2pdb(res_list, pdbid, save_path):
-    # 创建一个新的结构对象
+    
     new_structure = Structure.Structure("New_Structure")
     model = Model.Model(0)
     new_structure.add(model)
-    # 创建链的字典来存储不同链
+    
     chains = {}
 
     for res in res_list:
-        chain_id = res.get_full_id()[2]  # 获取原始链ID
+        chain_id = res.get_full_id()[2]  
         if chain_id not in chains:
             chain = Chain.Chain(chain_id)
             model.add(chain)
             chains[chain_id] = chain
         chains[chain_id].add(res)
 
-    # 创建PDBIO对象并写入文件
     io = PDBIO()
     io.set_structure(new_structure)
     io.save(save_path)
 
 
 # %%
-# import traceback # 如果文件开头没写，请确保这里引入一下
+
 
 def mols2graphs(complex_path, pdbid, organism_set, temp_set, \
     organism, ph, temp, dis_threshold = 5):
@@ -665,40 +649,38 @@ def mols2graphs(complex_path, pdbid, organism_set, temp_set, \
         temp_bins = generate_temp_bins_from_set(temp_set)
         temp_encoding = temp_bin_encoding(temp, temp_bins) 
         
-        # 1. 读取 ESM 特征
         esm2_path = os.path.join(complex_path, f'{pdbid}_esm2_3b.pt')
         if not os.path.exists(esm2_path): 
-            print(f"\n[Debug] {pdbid} 失败: 找不到 ESM 特征文件: {esm2_path}")
+            print(f"\n[Debug] {pdbid} failed: ESM-2 feature file not found: {esm2_path}")
             return None
         
         esm2_3b  = torch.load(esm2_path, map_location='cpu')[0]
         
-        # 2. 读取 UniMol 特征
+        
         unimol_path = os.path.join(complex_path, f'{pdbid}_unimol_1b.pt')
         if not os.path.exists(unimol_path): 
-            print(f"\n[Debug] {pdbid} 失败: 找不到 UniMol 特征文件: {unimol_path}")
+            print(f"\n[Debug] {pdbid} failed: UniMol feature file not found: {unimol_path}")
             return None
             
         unimol_1b = torch.load(unimol_path, map_location='cpu')
         unimol_1b = torch.squeeze(unimol_1b) 
 
-        # 3. 读取配体
+        
         ligand_path = os.path.join(complex_path, f'{pdbid}_ligand.sdf')
         try:
             ligand = Chem.MolFromMolFile(ligand_path, sanitize=True, removeHs=True)
         except Exception as e:
-            print(f"\n[Debug] {pdbid} 失败: RDKit 加载 ligand SDF 报错: {e}")
+            print(f"\n[Debug] {pdbid} failed: RDKit failed to parse ligand SDF file: {ligand_path}. Error: {e}")
             ligand = None
         
         if ligand is None: 
-            print(f"\n[Debug] {pdbid} 失败: ligand 解析后为 None (可能 SDF 格式不规范或找不到文件: {ligand_path})")
-            return None
+            print(f"\n[Debug] {pdbid} failed: RDKit returned None for ligand: {ligand_path}")
             
         if any([atom.GetSymbol() == 'Si' for atom in ligand.GetAtoms()]): 
-            print(f"\n[Debug] {pdbid} 失败: ligand 中包含模型不支持的硅 (Si) 原子")
+            print(f"\n[Debug] {pdbid} failed: Ligand contains silicon atoms, which are not supported by RDKit. Skipping this complex.")
             return None
 
-        # 4. 读取口袋
+ 
         res_list_pdb_dir = os.path.join(complex_path, f'Pocket_clean_{dis_threshold}A.pdb')
         pocket_raw_path = os.path.join(complex_path, f'Pocket_{dis_threshold}A.pdb')
         protein_path = os.path.join(complex_path, f'{pdbid}_protein.pdb')
@@ -710,16 +692,16 @@ def mols2graphs(complex_path, pdbid, organism_set, temp_set, \
                     res_list = get_clean_res_list(parser.get_structure(pdbid, pocket_raw_path).get_residues(), verbose=False, ensure_ca_exist=True)
                     res2pdb(res_list, pdbid, res_list_pdb_dir)
                 except Exception as e:
-                    print(f"\n[Debug] {pdbid} 警告: 尝试生成 clean pocket 失败: {e}")
+                    print(f"\n[Debug] {pdbid} failed: Failed to generate cleaned pocket PDB file. Error: {e}")
             else:
                 current_pocket_path = pocket_raw_path
         
         pocket_mol = Chem.MolFromPDBFile(current_pocket_path, sanitize=False, removeHs=True)
         if pocket_mol is None: 
-            print(f"\n[Debug] {pdbid} 失败: RDKit 解析口袋 PDB 失败: {current_pocket_path}")
+            print(f"\n[Debug] {pdbid} failed: RDKit failed to parse pocket PDB file: {current_pocket_path}")
             return None
 
-        # 5. 构建图
+       
         subgraphs_node, pos_sub_graph, node_batch_lig, node_class, edge_features_l, edge_index_l,subgraphs_node_pos = get_subgraph_mol(ligand)
 
         protein_node, edge_index_pro, edge_features_pro, coord_ca, coord_all = get_protein_graph(parser.get_structure(pdbid, protein_path), \
@@ -727,16 +709,15 @@ def mols2graphs(complex_path, pdbid, organism_set, temp_set, \
         
         node_batch_pro = get_pro_node_batch(pocket_mol, coord_all)
         
-        # 6. 交互图
+        
         edge_index_inter, edge_attrs_inter = inter_graph_cg(pos_sub_graph, coord_ca, dis_threshold=dis_threshold)
         
         if edge_index_inter is None: 
-            print(f"\n[Debug] {pdbid} 失败: edge_index_inter 为 None (配体和蛋白距离过远？)")
+            print(f"\n[Debug] {pdbid} failed: No interactions found between ligand and protein within the distance threshold of {dis_threshold} Å.")
             return None
 
         x_all_atom, edge_index_inter_all_atom, edge_attrs_inter_all_atom,pos_all_atom = get_inter_graph_all_atom(ligand, pocket_mol, dis_threshold=5.)
 
-        # 7. 组装数据
         data = HeteroData()
         data["protein"].x = protein_node
         data["protein", "protein_edge", "protein"].edge_index = edge_index_pro
@@ -770,8 +751,8 @@ def mols2graphs(complex_path, pdbid, organism_set, temp_set, \
         return data
 
     except Exception as e:
-        print(f"\n[Debug] {pdbid} 致命崩溃: 图构建过程发生代码异常！")
-        traceback.print_exc() # 这句非常关键，能把错误具体行数打出来
+        print(f"\n[Debug] {pdbid} failed: An unexpected error occurred during graph generation. Error: {e}")
+        traceback.print_exc() 
         return None
 
 # %%
@@ -801,7 +782,7 @@ class GraphDataset(Dataset):
         ph = row['pH']
         temp = row['Temp']
         
-        # 3. 确定路径
+     
         if 'complex' in row.index and row['complex'] and not pd.isna(row['complex']):
             complex_dir = os.path.dirname(str(row['complex']))
         else:
@@ -865,34 +846,5 @@ if __name__ == '__main__':
     print('finish!')
 
 
-    # parser = PDBParser(QUIET=True)
-    # protein = "/export/home/luod111/PLmodel/supervised/data/pdbbind/protein_remove_extra_chains_10A/2uy4_protein.pdb"
-    # pocket_biopy = "/export/home/luod111/PLmodel/supervised/data/pdbbind/v2020-other-PL/2uy4/Pocket_8A.pdb"
-    # protein_saprot_feature = "/export/home/luod111/PLmodel/supervised/data/pdbbind/embeddings/2uy4_embedding.pt"
-    # get_pcoket_saprot_feature(parser.get_structure('2uy4', protein), parser.get_structure('2uy4', pocket_biopy), protein_saprot_feature)
-    # pdbid = '4j48'
-    # test_file = f"/export/home/luod111/PLmodel/supervised/data/pdbbind/v2020-other-PL/{pdbid}/{pdbid}_8A.rdkit"
-    # with open(test_file, 'rb') as f:
-    #     ligand, pocket = pickle.load(f)
-    # pocket_biopy = parser.get_structure('1a30', pocket_biopy)
-
-    # # # # interact_matrix = get_interaction_matrix(ligand, pocket.get_residues())
-    # # # # print(interact_matrix)
-    # pocket_res_list = get_clean_res_list(pocket_biopy.get_residues(), verbose=False, ensure_ca_exist=True)
-    # _,pocket_coords, pocket_coords_main = get_pro_coord(pocket_res_list)
-    # all_atom_pos_res_list = []
-    # for i in pocket_coords:
-    #     all_atom_pos_res_list.extend(i)
-    # print(len(all_atom_pos_res_list))
-    # coords = pocket.GetConformer().GetPositions()
-    # print(len(coords))
-    # print(coords)
-    # get_subgraph_mol(ligand)
-    # # get_protein_res_class(parser.get_structure('1a1c', protein), parser.get_structure('1a1c', pocket))
-    # # get_protein_graph(parser.get_structure('1a1c', protein), parser.get_structure('1a1c', pocket))
-
-    # mols2graphs(test_file, f'{pdbid}', 1, 'test_l.pyg', pocket_dis = 8)
-    # vocab_txt = "/export/home/luod111/kcat/PS-VAE/data/zinc250k/zinc_350.txt"
-    # get_sub_graph_dict(vocab_txt)
 
 # %%

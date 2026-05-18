@@ -1,7 +1,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow)](https://github.com/ld139/graphkcat)
 [![bioRxiv](https://img.shields.io/badge/bioRxiv-2025.05.18.654694-green)](https://doi.org/10.1101/2025.05.18.654694)
 
-# GraphKcat: Catalytic Pocket-Augmented Learning for Enzyme Kinetic Parameter Prediction
+# GraphKcat: Enzyme Kinetic Parameter Prediction via Catalytic Pocket-Augmented Machine Learning
 
 <div align="center">
 <img src="./toc.svg" width="600">
@@ -31,7 +31,7 @@ Please make sure that `torch`, `torch-scatter`, and `torch-geometric` are compat
 
 ## Data and Checkpoint
 
-The processed datasets and structural files are available at [Zenodo](https://zenodo.org/records/18501019).
+The processed datasets and structural files are available at [Zenodo](https://zenodo.org/records/18501019) and [Zenodo](https://zenodo.org/records/20120617).
 
 After downloading and extracting the files, the recommended directory structure is:
 
